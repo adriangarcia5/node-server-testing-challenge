@@ -1,4 +1,3 @@
-// Update with your config settings.
 
 module.exports = {
 
@@ -7,6 +6,19 @@ module.exports = {
     connection: {
       filename: './dev.sqlite3'
     }
+  },
+
+  // inserted for the use of testing
+
+  testing: {
+    client: 'sqlite3',
+    connection: {
+      filename: './database/test.db3',
+    },
+    useNullAsDefault: true,
+    migrations: {
+      directory: './database/migrations',
+    },
   },
 
   staging: {
